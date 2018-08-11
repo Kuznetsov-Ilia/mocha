@@ -7,4 +7,4 @@ RUN npm init -y && \
     apk --update add --no-cache postgresql-client
 WORKDIR /test
 VOLUME [ "/test" ]
-CMD ["mocha", "--compilers", "js:@babel/register", "/test"]
+CMD ["mocha", "--require", "@babel/register", "/test"]
